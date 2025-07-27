@@ -406,3 +406,15 @@ footer {
 .service-card:hover {
   transform: translateY(-5px);
 }
+
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
