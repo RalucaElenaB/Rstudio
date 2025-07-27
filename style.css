@@ -20,6 +20,7 @@ header {
   background: #3b82f6;
   color: white;
   padding: 1rem;
+  position: relative;
 }
 
 header .container {
@@ -30,10 +31,12 @@ header .container {
   margin: auto;
 }
 
+/* Meniul de navigare */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1rem;
+  transition: max-height 0.3s ease;
 }
 
 .nav-links a {
@@ -43,6 +46,44 @@ header .container {
 
 .nav-links a:hover {
   color: #ede7f6;
+}
+
+/* Buton hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #3b82f6;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .nav-links.open {
+    max-height: 300px; /* suficient pentru toate link-urile */
+  }
 }
 
 /* Hero */
@@ -407,6 +448,7 @@ footer {
   transform: translateY(-5px);
 }
 
+/*Responsive*/
 @media (max-width: 768px) {
   nav ul {
     display: flex;
