@@ -20,8 +20,6 @@ header {
   background: #3b82f6;
   color: white;
   padding: 1rem;
-  position: relative;
-  z-index: 10;
 }
 
 header .container {
@@ -32,7 +30,6 @@ header .container {
   margin: auto;
 }
 
-/* Meniul de navigare */
 .nav-links {
   list-style: none;
   display: flex;
@@ -42,7 +39,6 @@ header .container {
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -411,15 +407,12 @@ footer {
   transform: translateY(-5px);
 }
 
-/*Responsive*/
-@media (max-width: 768px) {
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+/*logo*/
+.logo a {
+  color: white;
+  text-decoration: none;
+}
 
-  nav ul li {
-    margin: 10px 0;
-  }
+.logo a:hover {
+  opacity: 0.8; /* efect mic la hover */
 }
